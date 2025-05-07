@@ -1,0 +1,46 @@
+.container {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: grid;
+  grid-template: "A A B" "D E B" "D C C";
+  gap: 10px;
+  animation: rotate 10s linear infinite;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.item {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+img {
+  width: 240%;
+  height: 240%;
+  object-fit: cover;
+  animation: rotate 10s linear infinite reverse;
+}
+
+.item:nth-child(1) {
+  grid-area: A;
+}
+.item:nth-child(2) {
+  grid-area: B;
+}
+.item:nth-child(3) {
+  grid-area: C;
+}
+.item:nth-child(4) {
+  grid-area: D;
+}
+.item:nth-child(5) {
+  grid-area: E;
+}
